@@ -1,0 +1,14 @@
+@import "../styles/shared/colors";
+@import "../styles/shared/mixins";
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: var(--color-white);
+    border-bottom: var(--color-grey-light-1);
+}

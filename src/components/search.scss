@@ -1,0 +1,64 @@
+@import "../styles/shared/colors";
+@import "../styles/shared/mixins";
+
+.search {
+  flex: 1 0 60%;
+
+  @include respond(phone) {
+    flex: 1 0 80%;
+  }
+  @include respond(tab-port) {
+    flex: 1 0 60%;
+  }
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    width: 80%;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 3.5rem 0.7rem 1.4rem;
+    border-radius: 20rem;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: 1px;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 1rem;
+    top: 2.5rem;
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3);
+  }
+}
